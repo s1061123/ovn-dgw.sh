@@ -24,3 +24,5 @@ ovs-vsctl --may-exist add-port br-ext eth0
 ovs-vsctl br-set-external-id br-ext bridge-id br-ext
 move_ip_to_ovn_bridge
 
+echo export OVN_NBCTL_OPTIONS="--db=tcp:${master_ip}:6641" >> ~/.bashrc
+echo export OVN_SBCTL_OPTIONS="--db=tcp:${master_ip}:6642" >> ~/.bashrc
